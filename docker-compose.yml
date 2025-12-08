@@ -1,0 +1,31 @@
+services:
+  tanya-api:
+    image: tanya_api
+    container_name: tanya_api
+    restart: unless-stopped
+    build:
+      context: .
+      target: build
+    ports:
+      - ${PORT}:${PORT}
+    env_file:
+      - .env
+    volumes:
+      - ./:/home/node/app
+      - /home/node/app/node_modules
+    command: node ace serve --watch
+    depends_on:
+      - tanya-mysql
+  tanya-mysql:
+    image: mysql
+    container_name: tanya-mysql
+    restart: always
+    environment:
+      - MYSQL_DATABASE=tanyaApi
+      - MYSQL_ROOT_PASSWORD=admin123
+    ports:
+      - '3306:3306'
+    volumes:
+      - db:/var/lib/mysql
+volumes:
+  db:

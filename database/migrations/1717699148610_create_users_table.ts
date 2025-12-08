@@ -1,0 +1,39 @@
+import { BaseSchema } from '@adonisjs/lucid/schema'
+import hash from '@adonisjs/core/services/hash'
+
+export default class extends BaseSchema {
+  protected tableName = 'users'
+
+  async up() {
+    this.schema.createTable(this.tableName, (table) => {
+      table.increments('id').notNullable()
+      table.string('full_name').nullable()
+      table.string('email', 254).notNullable().unique()
+      table.string('password').notNullable()
+      table.string('difficulty')
+      table.integer('consecutive_logged_days')
+      table.timestamp('last_logged').nullable()
+      table.timestamp('created_at').notNullable()
+      table.timestamp('updated_at').nullable()
+    })
+
+    this.defer(async (db) => {
+      await db.table(this.tableName).insert([
+        {
+          id: 1,
+          full_name: 'Admin',
+          email: 'admin@admin.com',
+          password: await hash.make('gd,Xp0x04%XG'),
+          difficulty: 'easy',
+          consecutive_logged_days: 0,
+          created_at: new Date(),
+          updated_at: new Date(),
+        },
+      ])
+    })
+  }
+
+  async down() {
+    this.schema.dropTable(this.tableName)
+  }
+}
