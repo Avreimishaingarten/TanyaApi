@@ -25,7 +25,7 @@ const order = vine.number().unique(async (db, value) => {
 })
 
 const backgroundColor = vine.string().unique(async (db, value) => {
-  const match = await db.from('chapters').select('id').where('order', value).first()
+  const match = await db.from('chapters').select('id').where('background_color', value).first()
 
   return !match
 })
