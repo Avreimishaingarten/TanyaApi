@@ -16,20 +16,20 @@ export default class extends BaseSchema {
         {
           id: 1,
           goal: 5,
-          created_at: new Date(),
-          updated_at: new Date(),
+          created_at: new Date().toISOString(),
+          updated_at: new Date().toISOString(),
         },
         {
           id: 2,
           goal: 1,
-          created_at: new Date(),
-          updated_at: new Date(),
+          created_at: new Date().toISOString(),
+          updated_at: new Date().toISOString(),
         },
         {
           id: 3,
           goal: 2,
-          created_at: new Date(),
-          updated_at: new Date(),
+          created_at: new Date().toISOString(),
+          updated_at: new Date().toISOString(),
         },
       ])
     })

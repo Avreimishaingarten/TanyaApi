@@ -22,8 +22,8 @@ export default class extends BaseSchema {
           name: 'Unit 1',
           description: 'וְהִנֵּה כָּל בְּחִינָה... חֶסֶד גְּבוּרָה תִּפְאֶרֶת כוּ',
           chapter_id: 1,
-          created_at: new Date(),
-          updated_at: new Date(),
+          created_at: new Date().toISOString(),
+          updated_at: new Date().toISOString(),
         },
       ])
     })

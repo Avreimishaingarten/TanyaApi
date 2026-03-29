@@ -30,8 +30,8 @@ export default class extends BaseSchema {
             'מִשָּׁלֹשׁ',
           ]),
           unit_id: 1,
-          created_at: new Date(),
-          updated_at: new Date(),
+          created_at: new Date().toISOString(),
+          updated_at: new Date().toISOString(),
         },
       ])
     })

@@ -24,8 +24,8 @@ export default class extends BaseSchema {
           content: "פרק א תניא [בסוף פרק ג' דנדה]",
           audio_name: '1HHsm_1.mp3',
           unit_id: 1,
-          created_at: new Date(),
-          updated_at: new Date(),
+          created_at: new Date().toISOString(),
+          updated_at: new Date().toISOString(),
         },
         {
           id: 2,
@@ -34,8 +34,8 @@ export default class extends BaseSchema {
           content: 'משביעים אותו תהי צדיק ואל תהי רשע',
           audio_name: '1HHsm_2.mp3',
           unit_id: 1,
-          created_at: new Date(),
-          updated_at: new Date(),
+          created_at: new Date().toISOString(),
+          updated_at: new Date().toISOString(),
         },
         {
           id: 3,
@@ -44,8 +44,8 @@ export default class extends BaseSchema {
           content: 'ואפילו כל העולם כולו אומרים לך צדיק אתה',
           audio_name: '1HHsm_3.mp3',
           unit_id: 1,
-          created_at: new Date(),
-          updated_at: new Date(),
+          created_at: new Date().toISOString(),
+          updated_at: new Date().toISOString(),
         },
         {
           id: 4,
@@ -54,8 +54,8 @@ export default class extends BaseSchema {
           content: 'היה בעיניך כרשע',
           audio_name: '1HHsm_4.mp3',
           unit_id: 1,
-          created_at: new Date(),
-          updated_at: new Date(),
+          created_at: new Date().toISOString(),
+          updated_at: new Date().toISOString(),
         },
       ])
     })
