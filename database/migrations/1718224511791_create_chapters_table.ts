@@ -24,8 +24,8 @@ export default class extends BaseSchema {
           principal_color: '#2E85DE',
           icon_color: '#DE872E',
           background_color: '#2e85de1a',
-          created_at: new Date(),
-          updated_at: new Date(),
+          created_at: new Date().toISOString(),
+          updated_at: new Date().toISOString(),
         },
         {
           id: 2,
@@ -34,8 +34,8 @@ export default class extends BaseSchema {
           principal_color: '#1CC4AB',
           icon_color: '#1cc457',
           background_color: '#1cc4ab1a',
-          created_at: new Date(),
-          updated_at: new Date(),
+          created_at: new Date().toISOString(),
+          updated_at: new Date().toISOString(),
         },
         {
           id: 3,
@@ -44,8 +44,8 @@ export default class extends BaseSchema {
           principal_color: '#FB575A',
           icon_color: '#fba657',
           background_color: '#ffefef',
-          created_at: new Date(),
-          updated_at: new Date(),
+          created_at: new Date().toISOString(),
+          updated_at: new Date().toISOString(),
         },
         {
           id: 4,
@@ -54,8 +54,8 @@ export default class extends BaseSchema {
           principal_color: '#DCDCDC',
           icon_color: '#DCDCDC',
           background_color: '#ffefef',
-          created_at: new Date(),
-          updated_at: new Date(),
+          created_at: new Date().toISOString(),
+          updated_at: new Date().toISOString(),
         },
       ])
     })
