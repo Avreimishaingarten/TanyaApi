@@ -9,7 +9,7 @@ services:
     plan: free
     name: tanya-api
     runtime: node
-    buildCommand: npm install && node ace build && cd build && node ace migration:run --force
+    buildCommand: npm install --include=dev && node ace build && cd build && node ace migration:run --force
     startCommand: cd build && node bin/server.js
     envVars:
       - key: NODE_ENV
@@ -17,7 +17,7 @@ services:
       - key: HOST
         value: 0.0.0.0
       - key: PORT
-        value: 3333
+        value: 10000
       - key: APP_KEY
         generateValue: true
       - key: APP_NAME

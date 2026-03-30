@@ -18,7 +18,12 @@ const dbConfig = defineConfig({
     },
     pg: {
       client: 'pg',
-      connection: env.get('DATABASE_URL', ''),
+      connection: {
+        connectionString: env.get('DATABASE_URL', ''),
+        ssl: {
+          rejectUnauthorized: false,
+        },
+      },
       migrations: {
         naturalSort: true,
         paths: ['database/migrations'],
