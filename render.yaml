@@ -9,8 +9,8 @@ services:
     plan: free
     name: tanya-api
     runtime: node
-    buildCommand: npm install && node ace build
-    startCommand: node build/bin/server.js
+    buildCommand: npm install && node ace build && cd build && node ace migration:run --force
+    startCommand: cd build && node bin/server.js
     envVars:
       - key: NODE_ENV
         value: production
