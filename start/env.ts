@@ -19,6 +19,7 @@ export default await Env.create(new URL('../', import.meta.url), {
   LOG_LEVEL: Env.schema.enum(['fatal', 'error', 'warn', 'info', 'debug', 'trace']),
   APP_NAME: Env.schema.string(),
   DB_CONNECTION: Env.schema.string.optional(),
+  DATABASE_URL: Env.schema.string.optional(),
   DB_HOST: Env.schema.string.optional(),
   DB_PORT: Env.schema.number.optional(),
   DB_USER: Env.schema.string.optional(),

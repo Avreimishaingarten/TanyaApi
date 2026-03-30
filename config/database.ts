@@ -16,6 +16,14 @@ const dbConfig = defineConfig({
         paths: ['database/migrations'],
       },
     },
+    pg: {
+      client: 'pg',
+      connection: env.get('DATABASE_URL', ''),
+      migrations: {
+        naturalSort: true,
+        paths: ['database/migrations'],
+      },
+    },
     mysql: {
       client: 'mysql2',
       connection: {
